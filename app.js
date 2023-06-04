@@ -92,3 +92,9 @@ setTimeout(function() {
     loadingScreen.style.display = "none";
   }, 1000); // 1000 millisecondi = 1 secondo
 }, 3000); // 2000 millisecondi = 2 secondi
+
+function join() {
+  var slideout = document.getElementById('wrapper-join');
+
+  slideout.style.display = 'none'
+}
