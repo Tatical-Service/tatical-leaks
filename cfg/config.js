@@ -30,8 +30,8 @@ function inizializeFirstQuestions() {
         const v = FistQuestionPage[k];
         let html = `
         <input class="relative left-[0%] border-solid border-[2.5px] cursor-pointer border-zinc-700 rounded-[12px] hover:border-zinc-400 transition-all duration-500 ease-in-out w-[33vh] h-[6vh]" type="radio" id="${v.id}" name="radioFruit" value="${v.value}">
-        <label class="text-white sm:text-left relative left-[0%] top-[0%] font-[Inter] text-[1.7vmin] relative left-[10%] mr-[-3.5%] border-solid border-[2.5px] cursor-pointer border-zinc-700 rounded-[12px] hover:border-zinc-400 transition-all duration-500 ease-in-out sm:w-[80%] md:w-[33vh] h-[6vh] mb-5" for="${v.id}"><b class='relative sm:left-[13%] md:left-[20%] sm:top-[30%] md:top-[25%]'>${v.nome}</b></label>
-        <img class='relative sm:left-[-65%] md:left-[-24%] top-[0%] w-[6vh] h-[6vh]' src='${v.img}'>
+        <label class="text-white xs:text-left sm:text-left relative left-[0%] top-[0%] font-[Inter] text-[1.7vmin] relative left-[10%] mr-[-3.5%] border-solid border-[2.5px] cursor-pointer border-zinc-700 rounded-[12px] hover:border-zinc-400 transition-all duration-500 ease-in-out xs:w-[80%] sm:w-[80%] md:w-[33vh] h-[6vh] mb-5" for="${v.id}"><b class='relative xs:left-[20%] sm:left-[13%] md:left-[20%] xs:text-[2.7vmin] xs:top-[30%] sm:top-[30%] md:top-[25%]'>${v.nome}</b></label>
+        <img class='relative xs:left-[-62%] sm:left-[-65%] md:left-[-24%] top-[0%] w-[6vh] h-[6vh]' src='${v.img}'>
         `
         $('#main').append(html)
     }
