@@ -8,6 +8,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                animation: {
+                    'spin-slow': 'spin 10s linear infinite',
+                    'progress': 'progress 6s linear',
+                },
+                rotate: {
+                    '45-negative': '-45deg',
+                },
+                scale: {
+                '-100': '-1',
+                },
+                colors: {
+                    us: '#36d2c5',
+                    normal: '#8a8a8a',
+                    emerals: '#00cfa9',
+                },
+                screens: {
+                    '2xs': { min: '300px' },
+                    xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+                },
+                }
+            }
+        }
+    </script>
     <title>Tatical Engine App - by "samu#2373</title>
 </head>
     <style>
@@ -142,10 +169,10 @@
             <img class="w-full z-30 h-full absolute object-cover top-0 left-0" src="https://media.discordapp.net/attachments/1064105595797520484/1114562265597890641/BANNER_DISCORD_LEAKS_1.png?width=1201&height=675" alt="">
             <div class="w-full z-40 h-full bg-zinc-800/[50%]"></div>
             <div class="w-full z-40 h-full absolute top-0 left-0 bg-gradient-to-t from-black/[98%] to-black/[85%]"></div>
-            <img id="logo" style="animation: float 6s ease-in-out infinite;" class="absolute z-40 sm:w-[27vh] sm:h-[27vh] md:w-[33vh] md:h-[33vh] top-[25%] object-cover md:left-[43%] sm:left-[38%]" src="https://media.discordapp.net/attachments/1062537890225201194/1114128096531054592/tcaleaks.gif?width=563&height=563" alt="">
-            <h1 style="animation: float 6s ease-in-out infinite;" class="absolute z-40 text-zinc-700 font-[Inter] font-[550] text-[2.3vmin] top-[58%] sm:left-[40%] md:left-[42%]">Welcome in Tatical Community</h1>
-            <h1 style="animation: float 6s ease-in-out infinite;" class="absolute z-40 text-zinc-200 font-[Inter] font-[800] text-[3.0vmin] top-[63%] sm:left-[33%] md:left-[39%]">We personalize your experience</h1>
-            <h1 id="toswarn" class="absolute z-50 text-zinc-200 font-[Inter] font-[350] sm:text-[1.7vmin] md:text-[1.5vmin] top-[93%] sm:left-[30%] md:left-[40%]">Your responses will be treated in accordance with the <span class="relative"><a class="relative text-red-500" href="https://discord.com/channels/1083834519632744459/1084183326874685512/1112310341632794664" id="toslink"> Tatical TOS</a></span></h1>
+            <img id="logo" style="animation: float 6s ease-in-out infinite;" class="absolute z-40 xs:w-[27vh] xs:h-[27vh] sm:w-[27vh] sm:h-[27vh] md:w-[33vh] md:h-[33vh] top-[25%] object-cover md:left-[43%] xs:left-[25%] sm:left-[38%]" src="https://media.discordapp.net/attachments/1062537890225201194/1114128096531054592/tcaleaks.gif?width=563&height=563" alt="">
+            <h1 style="animation: float 6s ease-in-out infinite;" class="absolute z-40 text-zinc-700 font-[Inter] font-[550] text-[2.3vmin] top-[58%] xs:left-[27%] xs:text-[3.0vmin] sm:left-[40%] md:left-[42%]">Welcome in Tatical Community</h1>
+            <h1 style="animation: float 6s ease-in-out infinite;" class="absolute z-40 text-zinc-200 font-[Inter] font-[800] text-[3.0vmin] top-[63%] xs:left-[23%] xs:text-[3.5vmin] sm:left-[33%] md:left-[39%]">We personalize your experience</h1>
+            <h1 id="toswarn" class="absolute z-50 text-zinc-200 font-[Inter] font-[350] xs:text-[2.3vmin] sm:text-[1.7vmin] md:text-[1.5vmin] top-[93%] xs:left-[15%] sm:left-[30%] md:left-[40%]">Your responses will be treated in accordance with the <span class="relative"><a class="relative text-red-500" href="https://discord.com/channels/1083834519632744459/1084183326874685512/1112310341632794664" id="toslink"> Tatical TOS</a></span></h1>
             <div class="absolute z-50 blur-[100px] opacity-50 bg-red-500 w-[20vw] left-[-5%] top-[10%] right-0 h-[15vh] mr-[-5vw] mt-[-10vh]"></div>
             <div class="absolute z-50 blur-[100px] opacity-50 bg-red-500 w-[20vw] left-[90%] top-[15%] right-0 h-[15vh] mr-[-5vw] mt-[-10vh]"></div>
             <div class="absolute z-50 blur-[100px] opacity-20 bg-red-500 w-[20vw] right-0 h-[15vh] mr-[-5vw] mt-[-10vh]"></div>
@@ -153,10 +180,10 @@
             <div class="absolute z-50 blur-[100px] opacity-10 bg-red-500 w-[13vw] h-[20vh] ml-[-3vw] mt-[-10vh]"></div>
             <div class="absolute z-50 blur-[100px] opacity-20 bg-red-500 w-[20vw] bottom-0 h-[15vh] mr-[-5vw] mb-[-10vh]"></div>
             <div class="absolute z-50 blur-[100px] opacity-20 bg-red-500 w-[10vw] h-[15vh] ml-[-5vw] mt-[5vh]"></div>
-            <div onclick="togglePopup()" style="animation: float 6s ease-in-out infinite;" id="button-start" class="absolute cursor-pointer hover:border-solid hover:border-[1.5px] hover:border-red-500 transition-all duration-300 ease z-50 sm:left-[43%] md:left-[46%] top-[75%] w-[20vh] h-[4.5vh] bg-red-500 rounded-[25px] text-center text-white font-[Inter]"><h1 class="relative top-[25%] sm:text-[1.8vmin] md:text-[1.5vmin]">Start Customize</h1></div>
-            <div id="popup" class="absolute z-50 sm:left-[0%] sm:top-[0%] md:left-[30%] md:top-[20%] md:rounded-[15px] bg-zinc-800 md:w-[85vh] sm:w-screen sm:rounded-[0px] sm:h-screen md:h-[60vh] flex flex-col">
+            <div onclick="togglePopup()" style="animation: float 6s ease-in-out infinite;" id="button-start" class="absolute cursor-pointer hover:border-solid hover:border-[1.5px] hover:border-red-500 transition-all duration-300 ease z-50 sm:left-[43%] md:left-[46%] top-[75%] w-[20vh] h-[4.5vh] bg-red-500 rounded-[25px] text-center text-white font-[Inter]"><h1 class="relative top-[25%] xs:text-[2.5vmin] sm:text-[1.8vmin] md:text-[1.5vmin]">Start Customize</h1></div>
+            <div id="popup" class="absolute z-50 xs:left-[0%] sm:left-[0%] xs:top-[0%] sm:top-[0%] md:left-[30%] md:top-[20%] md:rounded-[15px] bg-zinc-800 md:w-[85vh] xs:w-screen xs:w-screen sm:w-screen xs:w-screen xs:rounded-[0px] sm:rounded-[0px] xs:w-screen sm:h-screen xs:h-screen md:h-[60vh] flex flex-col">
                 <header class="absolute top-0 left-0 w-full h-[20vh]">
-                    <h1 class="absolute z-50 text-zinc-400 font-[Inter] font-[350] sm:text-[1.8vmin] md:text-[1.6vmin] sm:top-[50%] md:top-[40%] ml-20">First Question of 2<span><div class="rounded-full w-[0.5vh] h-[0.5vh] absolute top-[35%] left-[110%] bg-zinc-700"></div></span><h1 class="absolute absolute sm:top-[48.5%] md:top-[39%] left-[30%] text-red-500 hover:underline-offset-auto">Required</h1></h1>
+                    <h1 class="absolute z-50 text-zinc-400 font-[Inter] font-[350] xs:text-[1.8vmin] sm:text-[1.8vmin] md:text-[1.6vmin] sm:top-[50%] xs:top-[50%] md:top-[40%] ml-20">First Question of 2<span><div class="rounded-full w-[0.5vh] h-[0.5vh] absolute top-[35%] left-[110%] bg-zinc-700"></div></span><h1 class="absolute absolute sm:top-[48.5%] md:top-[39%] left-[30%] text-red-500 hover:underline-offset-auto">Required</h1></h1>
                     <br>
                     <h1 class="text-white sm:text-[3.0vmin] md:text-[2.5vmin] absolute ml-20 sm:top-[60%] md:top-[50%] mt-4 font-[Inter]"><b>Which tools are you interested in?</b></h1>
                 </header>
