@@ -28,8 +28,9 @@
                     emerals: '#00cfa9',
                 },
                 screens: {
-                    '2xs': { min: '300px' },
                     xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+                    '2xs': { max: '420px' },
+                    '1xs': { max: '500px' },
                 },
                 }
             }
@@ -109,7 +110,7 @@
         }
 
         #popup {
-        display: none;
+        display: block;
         transform: scale(0);
         animation: scaleEffect 1s forwards;
         overflow: hidden;
@@ -184,15 +185,15 @@
             <div onclick="togglePopup()" style="animation: float 6s ease-in-out infinite;" id="button-start" class="absolute cursor-pointer hover:border-solid hover:border-[1.5px] hover:border-red-500 transition-all duration-300 ease z-50 sm:left-[43%] md:left-[46%] top-[75%] w-[20vh] h-[4.5vh] bg-red-500 rounded-[25px] text-center text-white font-[Inter]"><h1 class="relative top-[25%] xs:text-[2.5vmin] sm:text-[1.8vmin] md:text-[1.5vmin]">Start Customize</h1></div>
             <div id="popup" class="absolute z-50 xs:left-[0%] sm:left-[0%] xs:top-[0%] sm:top-[0%] md:left-[30%] md:top-[20%] md:rounded-[15px] bg-zinc-800 md:w-[85vh] xs:w-screen xs:w-screen sm:w-screen xs:w-screen xs:rounded-[0px] sm:rounded-[0px] xs:w-screen sm:h-screen xs:h-screen md:h-[60vh] flex flex-col">
                 <header class="absolute top-0 left-0 w-full h-[20vh]">
-                    <h1 class="absolute z-50 text-zinc-400 font-[Inter] font-[350] xs:text-[1.8vmin] xs:text-[2.8vmin] sm:text-[1.8vmin] md:text-[1.6vmin] xs:left-[-5%] sm:top-[50%] xs:top-[50%] md:top-[40%] ml-20">First Question of 2<span><div class="rounded-full w-[0.5vh] h-[0.5vh] absolute top-[35%] left-[110%] bg-zinc-700"></div></span><h1 class="absolute absolute xs:top-[48.5%] xs:text-[3.2vmin] xs:left-[45%] sm:top-[52.5%] md:top-[39%] left-[30%] text-red-500 hover:underline-offset-auto">Required</h1></h1>
+                    <h1 class="absolute 1xs:left-[-9%] 2xs:text-[3.5vmin] 2xs:left-[-12%] z-50 text-zinc-400 font-[Inter] font-[350] xs:text-[1.8vmin] xs:text-[2.8vmin] sm:text-[1.8vmin] md:text-[1.6vmin] xs:left-[-5%] sm:top-[50%] xs:top-[50%] md:top-[40%] ml-20">First Question of 2<span><div class="rounded-full w-[0.5vh] h-[0.5vh] absolute top-[35%] left-[110%] bg-zinc-700"></div></span><h1 class="absolute absolute 2xs:top-[51%] 2xs:ml-2 xs:top-[48.5%] xs:text-[3.2vmin] xs:left-[45%] sm:top-[52.5%] md:top-[39%] left-[30%] text-red-500 hover:underline-offset-auto">Required</h1></h1>
                     <br>
-                    <h1 class="text-white xs:left-[-5%] xs:text-[4.0vmin] sm:text-[3.0vmin] md:text-[2.5vmin] absolute ml-20 sm:top-[60%] xs:top-[60%] md:top-[50%] mt-4 font-[Inter]"><b>Which tools are you interested in?</b></h1>
+                    <h1 class="text-white 1xs:left-[-9%] 1xs:text-[4.6vmin] 2xs:left-[-12%] 2xs:text-[4.8vmin] xs:left-[-5%] xs:text-[4.0vmin] sm:text-[3.0vmin] md:text-[2.5vmin] absolute ml-20 sm:top-[60%] xs:top-[60%] md:top-[50%] mt-4 font-[Inter]"><b>Which tools are you interested in?</b></h1>
                 </header>
                 <main id="main" class="absolute top-[20vh] left-0 w-full h-[18vh] flex flex-wrap">
                 </main>
-                <footer class="relative top-[85.5%] rounded-b-[15px] sm:background-transparent xs:background-transparent md:w-full md:h-[10vh] left-0 md:bg-zinc-900 flex flex-wrap">
+                <footer class="relative 2xs:top-[85%] md:top-[85.5%] rounded-b-[15px] sm:background-transparent xs:background-transparent md:w-full md:h-[10vh] left-0 md:bg-zinc-900 flex flex-wrap">
                     <!-- <h1 class="absolute z-50 text-zinc-400 font-[Inter] font-[350] text-[1.4vmin] top-[40%] left-[40%]">You will receive the badge: <span id="ruoli" class="relative text-zinc-300 font-[550]"></span> </h1> -->
-                    <div class="relative xs:top-[-15%] xs:left-[10%] sm:left-[10%] md:left-[85%] sm:w-[80%] xs:w-[80%]  sm:h-[4.5vh] xs:h-[4.5vh] md:h-[4.5vh] md:w-[10vh] rounded bg-red-500 hover:bg-red-700/[50%] transition-all duration-500 ease hover:opacity-70 cursor-pointer md:top-[25%] sm:top-[25%] text-white sm:text-[1.9vmin] md:text-[1.5vmin] text-center font-[Inter]"><span><i class="fa-solid md:block xs:hidden sm:hidden fa-arrow-right absolute text-white left-[70%] top-[30%] text-[1.7vmin]"></i></span><h1 class="relative md:left-[-5%] xs:left-[0%] sm:left-[0%] top-[25%]">Next</h1></div>
+                    <div class="relative xs:top-[-15%] xs:left-[10%] sm:left-[10%] md:left-[85%] sm:w-[80%] xs:w-[80%]  sm:h-[4.5vh] xs:h-[4.5vh] md:h-[4.5vh] md:w-[10vh] rounded bg-red-500 hover:bg-red-700/[50%] transition-all duration-500 ease hover:opacity-70 cursor-pointer md:top-[25%] sm:top-[25%] text-white sm:text-[1.9vmin] md:text-[1.5vmin] text-center font-[Inter]"><span><i class="fa-solid md:block xs:hidden sm:hidden fa-arrow-right absolute text-white left-[70%] top-[30%] text-[1.7vmin]"></i></span><h1 class="relative md:left-[-5%] xs:left-[0%] sm:left-[0%] top-[25%] 2xs:top-[10%] 1xs:top-[15%]">Next</h1></div>
                 </footer>
             </div>
         </div>
