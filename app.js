@@ -86,17 +86,9 @@ var scelta = localStorage.getItem('id')
 } */
 
 setTimeout(function() {
-  var firstLogo = document.querySelector("#loading-screen img.animate-pulse");
-  var secondLogo = document.querySelector("#loading-screen img.animate-spin");
-  firstLogo.classList.add("hidden");
-  secondLogo.classList.remove("hidden");
-}, 1000); // 1000 millisecondi = 1 secondo
-
-// Nasconde la schermata di caricamento con un'animazione di slide out verso il basso
-setTimeout(function() {
   var loadingScreen = document.getElementById("loading-screen");
   loadingScreen.classList.add("slide-out");
   setTimeout(function() {
     loadingScreen.style.display = "none";
   }, 1000); // 1000 millisecondi = 1 secondo
-}, 2000); // 2000 millisecondi = 2 secondi
+}, 3000); // 2000 millisecondi = 2 secondi
