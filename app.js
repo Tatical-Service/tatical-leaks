@@ -97,4 +97,14 @@ function join() {
   var slideout = document.getElementById('wrapper-join');
 
   slideout.style.display = 'none'
+  window.location.href = 'register.html'
+}
+
+function triggerPassword() {
+  var input = document.getElementById('password');
+  if (input.type === 'password') {
+    input.type = 'text';
+  } else {
+    input.type = 'password';
+  }
 }
