@@ -102,6 +102,7 @@ function join() {
 
 function triggerPassword() {
   var input = document.getElementById('password');
+  var eye = document.getElementsByClassName('eye');
   if (input.type === 'password') {
     input.type = 'text';
   } else {
