@@ -126,7 +126,8 @@ button.addEventListener('click', function() {
 
 const phone = document.getElementById('phone');
 const emailmobile = document.getElementById('emailmobile');
-const labelmobile = document.getElementById('labelmobile')
+const labelmobile = document.getElementById('labelmobile');
+const inputphonemail = document.getElementById('inputphonemail');
 
 emailmobile.addEventListener('click', function() {
     emailmobile.style.background = 'rgb(63 63 70)'
@@ -134,6 +135,8 @@ emailmobile.addEventListener('click', function() {
 
     labelmobile.innerHTML = 'E-MAIL'
 
+    inputphonemail.type = 'email'
+    inputphonemail.removeAttribute('pattern');
 })
 
 phone.addEventListener('click', function() {
@@ -141,4 +144,6 @@ phone.addEventListener('click', function() {
   emailmobile.style.background = 'transparent'
 
   labelmobile.innerHTML = 'PHONE'
+
+  inputphonemail.type = 'tel'
 })
