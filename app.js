@@ -97,7 +97,7 @@ function join() {
   var slideout = document.getElementById('wrapper-join');
 
   slideout.style.display = 'none'
-  window.location.href = 'register.html'
+  window.location.href = './AccountSystem/login.html'
 }
 
 function triggerPassword() {
@@ -109,3 +109,36 @@ function triggerPassword() {
     input.type = 'password';
   }
 }
+
+const checkbox = document.getElementById('tos1');
+const button = document.getElementById('registerbtn');
+
+checkbox.addEventListener('change', function() {
+  button.disabled = !checkbox.checked;
+});
+
+button.addEventListener('click', function() {
+  if (!button.disabled) {
+    // Reindirizza l'utente a una pagina specifica
+    window.location.href = '../home.html';
+  }
+});
+
+const phone = document.getElementById('phone');
+const emailmobile = document.getElementById('emailmobile');
+const labelmobile = document.getElementById('labelmobile')
+
+emailmobile.addEventListener('click', function() {
+    emailmobile.style.background = 'rgb(63 63 70)'
+    phone.style.background = 'transparent'
+
+    labelmobile.innerHTML = 'E-MAIL'
+
+})
+
+phone.addEventListener('click', function() {
+  phone.style.background = 'rgb(63 63 70)'
+  emailmobile.style.background = 'transparent'
+
+  labelmobile.innerHTML = 'PHONE'
+})

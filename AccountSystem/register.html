@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b2e2d566f2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                animation: {
+                    'spin-slow': 'spin 10s linear infinite',
+                    'progress': 'progress 6s linear',
+                },
+                rotate: {
+                    '45-negative': '-45deg',
+                },
+                scale: {
+                '-100': '-1',
+                },
+                colors: {
+                    us: '#36d2c5',
+                    normal: '#8a8a8a',
+                    emerals: '#00cfa9',
+                },
+                screens: {
+                    xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+                    '2xs': { max: '420px' },
+                    '1xs': { max: '500px' },
+                },
+                }
+            }
+        }
+    </script>
+    <title>Tatical Engine App - by "samu#2373</title>
+</head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+        @font-face {
+            font-family: "TT Lakes";
+            src: url("./fonts/ttlakes.eot");
+            src: url("./fonts/ttlakes.eot?#iefix") format("embedded-opentype"),
+                url("./fonts/ttlakes.woff2") format("woff2"),
+                url("./fonts/ttlakes.woff") format("woff"),
+                url("./fonts/ttlakes.ttf") format("truetype"),
+                url("./fonts/ttlakes.svg") format("svg");
+        }
+
+        @font-face {
+            font-family: "Acrom";
+            src: url("./assets/font/Acrom-Bold.ttf") format("truetype");
+        }
+
+        body,
+        html{
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card{
+            transform: scale(0);
+            animation: scaleEffect 1s forwards;
+        }
+
+        @keyframes scaleEffect {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+        #registerbtn {
+        opacity: 0.5;
+        cursor: pointer;
+        }
+
+        #tos1:checked ~ #registerbtn {
+        opacity: 1;
+        pointer-events: auto;
+        }
+
+        #emailmobile{
+            background: transparent;
+            transition: all 500ms ease;
+        }
+
+        #phone{
+            transition: all 500ms ease;
+        }
+
+        #labelmobile{
+            transition: all 500ms ease;
+        }
+    </style>
+    <body>
+        <div id="container" style="background-color: #030202; background-image: linear-gradient(326deg, #030202 0%, #580502 84%);" class="w-full h-full left-0 top-0 absolute flex justify-center items-center text-center">
+            <div id="card"class='relative w-screen h-screen md:w-[50vh] md:h-[70vh] rounded-[10px] bg-zinc-800'>
+                <header class="relative xs:hidden top-0 left-0 w-full h-[15vh] flex justify-left">
+                   <a style="transition: all 500ms ease-in-out;" class="text-zinc-500 hover:underline relative ml-[10%] mt-[10%] flex flex-wrap" href="login.html"><i class="fa-solid fa-arrow-left relative text-zinc-300"></i><p class="relative ml-3 top-[-5%]">Back</p></a>
+                   <h1 class="relative left-[7%] font-[Inter] text-[2.5vmin] text-white top-[65%]"><b>Create an account</b></h1>
+                </header>
+                <main class="relative xs:hidden top-0 left-0 w-ful h-[50%] flex justify-center text-center items-center">
+                    <div class="relative w-[80%] h-full flex flex-col">
+                        <label class="relative text-zinc-600 text-[1.3vmin] text-left" for="email"><b>EMAIL</b><span class="text-red-500 xs:text-[3.3vmin] md:text-[1.3vmin]"> *</span></label>
+                        <input class="rounded bg-zinc-900 border-none w-full h-[5vh] h-[4vh] mb-5" name="email" type="email">
+                        <label class="relative text-zinc-600 text-[1.3vmin] text-left" for="username"><b>NAME</b><span class="text-red-500 xs:text-[3.3vmin] md:text-[1.3vmin]"> *</span></label>
+                        <input id="username" class="rounded bg-zinc-900 border-none w-full h-[5vh] h-[4vh] mb-5" name="username" type="text">
+                        <label class="relative text-zinc-600 text-[1.3vmin] text-left" for="password"><b>PASSWORD</b><span class="text-red-500 xs:text-[3.3vmin] md:text-[1.3vmin]"> *</span></label>
+                        <input id="passwordrg" class="rounded bg-zinc-900 border-none w-full h-[5vh] h-[4vh] mb-5" name="password" type="password">
+                        <div class="relative left-0 w-full h-[8vh] flex flex-wrap">
+                            <label class="relative text-zinc-600 text-[1.3vmin] text-left" for="password"><b>DATE OF BIRTH</b><span class="text-red-500 xs:text-[3.3vmin] md:text-[1.3vmin]"> *</span></label>
+                            <input class="rounded bg-zinc-900 border-none w-full top-[80%] h-[5vh] text-zinc-500" placeholder="none" type="date">
+                        </div>
+                    </div>
+                </main>
+                <footer class="relative h-[20vh] xs:hidden w-full flex justify-center text-center items-center">
+                    <div class="relative w-[80%] h-[80%] flex flex-col">
+                        <input id="tos1" class="w-[24px] h-[24px] cursor-pointer background-transparent border-solid border-[1px] border-zinc-500 rounded" type="checkbox" name="check1">
+                        <p class="text-zinc-600 mt-[-7%] ml-[10%] text-[1.05vmin] font-[Inter] text-left">I declare to accept <a class="text-red-500 hover:underline cursor-pointer" href="">the Terms of Service</a> and the <a class="text-red-500 hover:underline cursor-pointer" href="">privacy statement</a> of Tatical</p>
+                        <input id="tos2" class="w-[24px] cursor-pointer h-[24px] top-[10%] background-transparent border-solid border-[1px] border-zinc-500 rounded mt-[3%]" type="checkbox" name="check1">
+                        <p class="text-zinc-600 mt-[-7%] ml-[10%] text-[1.05vmin] font-[Inter] text-left">(Optional) I want to receive email updates, tips and special offers from Tatical. You can withdraw your consent</p>
+                        <button disabled id="registerbtn" style="transition: all 600ms ease-in-out;" type="submit" class="bg-red-500 mt-5 rounded w-full h-[4.5vh] text-center text-white font-[Inter] xs:text-[3.3vmin]">Continues</button>
+                        <p class="text-zinc-600 font-[Inter] xs:text-[2.8vmin] md:text-[1.3vmin] relative mt-2"><a class="relative text-red-500 hover:underline transition-all duration-300 ease" href="register.html">You already have an account?</a></p>
+                    </div>
+                </footer>
+                <!-- MOBILE -->
+                <div class="md:hidden w-full h-[20vh] absolute left-0 top-0">
+                    <a style="transition: all 500ms ease-in-out;" class="text-zinc-500 hover:underline text-[5.5vmin] relative ml-[10%] mt-[10%] flex flex-wrap" href="login.html"><i class="fa-solid fa-arrow-left relative text-zinc-300"></i></a>
+                    <h1 class="relative left-[0%] top-[25%] font-[Inter] text-[6vmin] text-white"><b>Insert phone or e-mail</b></h1>
+                </div>
+                <div class="relative md:hidden w-full top-[20vh] h-[40%]">
+                    <div class="relative text-left w-[80%] h-[80%] left-[10%] top-[5%]">
+                        <div class="relative top-0 left-0 w-full h-[6vh]">
+                            <div class="relative w-full h-[90%] rounded-[5px] bg-zinc-900 flex flex-wrap">
+                                <div id="phone" class="relative rounded bg-zinc-700 w-[48.5%] mr-[1%] top-[8%] left-[1%] h-[85%] flex justify-center text-center items-center">
+                                    <h1 class="relative text-zinc-300 font-[Inter] font-[450] text-[3.5vmin]">Phone</h1>
+                                </div>
+                                <div id="emailmobile" class="relative rounded bg-zinc-700 w-[48.5%] top-[8%] left-[1%] h-[85%] flex justify-center text-center items-center">
+                                    <h1 class="relative text-zinc-300 font-[Inter] font-[450] text-[3.5vmin]">E-mail</h1>
+                                </div>
+                            </div>      
+                        </div>
+                        <label class="relative text-zinc-400 text-[3.2vmin] text-left top-[4%]" for="telnum"><b id="labelmobile">PHONE</b><span class="text-red-500 xs:text-[3.3vmin] md:text-[1.3vmin]"> *</span></label>
+                        <input class="rounded bg-zinc-900 border-none w-full h-[6vh] mt-2 mb-2" name="telnum" type="tel" pattern="[0-9]{10}">
+                        <a href="" class="text-red-500 text-[2.8vmin] hover:cursor-pointer mb-5 font-[Inter] font-[450]">Read our privacy policy statement</a>
+                        <button id="registerbtnmobile" style="transition: all 600ms ease-in-out;" type="submit" class="bg-red-500 mt-5 rounded w-full h-[5.5vh] text-center text-white font-[Inter] xs:text-[3.3vmin]">Continues</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../app.js"></script>
+</html>

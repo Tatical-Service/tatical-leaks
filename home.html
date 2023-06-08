@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b2e2d566f2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                animation: {
+                    'spin-slow': 'spin 10s linear infinite',
+                    'progress': 'progress 6s linear',
+                },
+                rotate: {
+                    '45-negative': '-45deg',
+                },
+                scale: {
+                '-100': '-1',
+                },
+                colors: {
+                    us: '#36d2c5',
+                    normal: '#8a8a8a',
+                    emerals: '#00cfa9',
+                },
+                screens: {
+                    xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+                    '2xs': { max: '420px' },
+                    '1xs': { max: '500px' },
+                },
+                }
+            }
+        }
+    </script>
+    <title>Tatical Engine App - by "samu#2373</title>
+</head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+        @font-face {
+            font-family: "TT Lakes";
+            src: url("./fonts/ttlakes.eot");
+            src: url("./fonts/ttlakes.eot?#iefix") format("embedded-opentype"),
+                url("./fonts/ttlakes.woff2") format("woff2"),
+                url("./fonts/ttlakes.woff") format("woff"),
+                url("./fonts/ttlakes.ttf") format("truetype"),
+                url("./fonts/ttlakes.svg") format("svg");
+        }
+
+        @font-face {
+            font-family: "Acrom";
+            src: url("./assets/font/Acrom-Bold.ttf") format("truetype");
+        }
+
+        body,
+        html{
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card{
+            transform: scale(0);
+            animation: scaleEffect 1s forwards;
+        }
+
+        @keyframes scaleEffect {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+    </style>
+    <body>
+        <div id="container" style="background-color: #030202; background-image: linear-gradient(326deg, #030202 0%, #580502 84%);" class="w-full h-full left-0 top-0 absolute flex flex-wrap">
+            <nav class="relative z-30 left-0 h-full w-full bg-zinc-700/[20%]">
+
+            </nav>
+            <div id="nav-two" class="w-[15%] rounded-tl-[15px] h-[100%] top-[-105%] z-40 bg-zinc-900/[25%] left-[5%] relative mt-[5%]">
+
+            </div>
+            <div id="wrapper" class="w-[66.5%] h-[100%] top-[-105%] z-40 bg-black/[30%] left-[5%] relative mt-[5%]">
+
+            </div>
+            <div id="nav-two" class="w-[15%] h-[100%] top-[-105%] z-40 bg-black/[45%] left-[5%] relative mt-[5%]">
+
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
